@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaMedium, FaDiscord } from 'react-icons/fa';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -32,7 +33,7 @@ function App() {
       >
         {isDarkMode ? '🌙' : '☼'}
       </button>
-      <section style={{ marginBottom: '2rem' }}>
+      <section style={{ marginTop: '3rem' }}>
         <img
           src="/your-icon.png" // ← 後で差し替える
           alt="Profile icon"
@@ -55,19 +56,31 @@ function App() {
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1.5rem',
-          margin: '2rem 0',
+          marginTop: '3rem',
         }}
       >
         {[
-          { label: 'GitHub', url: 'https://github.com/kkoisland' },
-          { label: 'LinkedIn', url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/' },
-          { label: 'Discord', url: 'https://discord.com/channels/@me/921968908561420338' },
-          { label: 'Twitter (JP)', url: 'https://twitter.com/kkoisland' },
-          { label: 'Twitter (EN)', url: 'https://twitter.com/kkoislandUS' },
-          { label: 'note', url: 'https://note.mu/kkoisland' },
-          { label: 'Medium', url: 'https://medium.com/@kkoisland' },
-          { label: 'Facebook', url: 'https://www.facebook.com/keiko.higuchi.509' },
-          { label: 'Speaker Deck', url: '#' },
+          { label: 'GitHub', icon: <FaGithub />, url: 'https://github.com/kkoisland' },
+          {
+            label: 'LinkedIn',
+            icon: <FaLinkedin />,
+            url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
+          },
+          {
+            label: 'Discord',
+            icon: <FaDiscord />,
+            url: 'https://discord.com/channels/@me/921968908561420338',
+          },
+          { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
+          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
+          { label: 'note', icon: '📝', url: 'https://note.mu/kkoisland' }, // note は絵文字で
+          { label: 'Medium', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
+          {
+            label: 'Facebook',
+            icon: <FaFacebook />,
+            url: 'https://www.facebook.com/keiko.higuchi.509',
+          },
+          { label: 'Speaker Deck', icon: '🎤', url: '#' }, // 公式なしのため絵文字
         ].map((item) => (
           <a
             key={item.label}
@@ -85,7 +98,8 @@ function App() {
             onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
             onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1.0)')}
           >
-            {item.label}
+            <span style={{ fontSize: '3rem', marginRight: '0.5rem' }}>{item.icon}</span>
+            <span style={{ position: 'relative', top: '-1rem' }}>{item.label}</span>
           </a>
         ))}
       </section>
