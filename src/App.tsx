@@ -35,12 +35,14 @@ function App() {
       </button>
       <section style={{ marginTop: '3rem' }}>
         <img
-          src="/your-icon.png" // ← 後で差し替える
+          src="/profile-icon.png"
           alt="Profile icon"
           style={{
             width: 120,
             height: 120,
-            borderRadius: '50%',
+            borderRadius: '30%',
+            objectFit: 'contain',
+            backgroundColor: '#fff',
             marginBottom: '1rem',
           }}
         />
