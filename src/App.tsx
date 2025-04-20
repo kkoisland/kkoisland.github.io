@@ -40,23 +40,33 @@ function App() {
       >
         {isDarkMode ? '🌙' : '☼'}
       </button>
-      <section style={{ marginTop: '3rem' }}>
-        <img
-          src="/profile-icon.png"
-          alt="Profile icon"
+      <section style={{ marginTop: '3rem', textAlign: 'center' }}>
+        <div
           style={{
-            width: 120,
-            height: 120,
-            borderRadius: '30%',
-            objectFit: 'contain',
-            backgroundColor: '#fff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1.5rem',
             marginBottom: '1rem',
           }}
-        />
-        <h1 style={{ fontSize: '2rem', margin: '0.5rem 0' }}>Keiko Higuchi</h1>
+        >
+          <img
+            src="/profile-icon.png"
+            alt="Profile icon"
+            style={{
+              width: 120,
+              height: 120,
+              borderRadius: '30%',
+              objectFit: 'contain',
+              backgroundColor: '#fff',
+            }}
+          />
+          <h1 style={{ fontSize: '2rem', margin: 0 }}>Keiko Higuchi</h1>
+        </div>
+
         <p style={{ fontSize: '1.2rem', margin: 0 }}>Frontend Engineer</p>
 
-        <p style={{ marginTop: '1.5rem', fontSize: '1rem', lineHeight: 1.6 }}>
+        <p style={{ marginTop: '1rem', fontSize: '1rem', lineHeight: 1.6 }}>
           Based in the US. Frontend Engineer with React / TypeScript. Writing on Zenn and Medium.
         </p>
       </section>
