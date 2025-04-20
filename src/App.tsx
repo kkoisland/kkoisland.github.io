@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaMedium, FaDiscord } from 'react-icons/fa';
 
+import zennIconLight from './assets/zenn-icon.svg';
+import zennIconDark from './assets/zenn-icon-white.svg';
+import noteIconLight from './assets/note-icon.svg';
+import noteIconDark from './assets/note-icon-white.svg';
+
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const zennIcon = isDarkMode ? zennIconDark : zennIconLight;
+  const noteIcon = isDarkMode ? noteIconDark : noteIconLight;
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
@@ -68,21 +75,65 @@ function App() {
             icon: <FaLinkedin />,
             url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
           },
+
+          { label: 'X/Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
+          { label: 'X/Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
           {
             label: 'Discord',
             icon: <FaDiscord />,
             url: 'https://discord.com/channels/@me/921968908561420338',
           },
-          { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
-          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
-          { label: 'note', icon: '📝', url: 'https://note.mu/kkoisland' }, // note は絵文字で
+          {
+            label: 'Zenn',
+            icon: (
+              <img
+                src={zennIcon}
+                alt="Zenn icon"
+                style={{
+                  width: '2.5rem',
+                  height: '2.5rem',
+                  display: 'inline-block',
+                  verticalAlign: 'middle',
+                  objectFit: 'contain',
+                  position: 'relative',
+                  top: '-0.5rem',
+                }}
+              />
+            ),
+            url: 'https://zenn.dev/kkoisland',
+          },
+          {
+            label: 'note',
+            icon: (
+              <img
+                src={noteIcon}
+                alt="Note icon"
+                style={{
+                  width: '4rem',
+                  height: '4rem',
+                  display: 'inline-block',
+                  verticalAlign: 'middle',
+                  objectFit: 'contain',
+                  position: 'relative',
+                  top: '-0.5rem',
+                  marginRight: '-1rem',
+                }}
+              />
+            ),
+            url: 'https://note.mu/kkoisland',
+          },
           { label: 'Medium', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
           {
             label: 'Facebook',
             icon: <FaFacebook />,
             url: 'https://www.facebook.com/keiko.higuchi.509',
           },
-          { label: 'Speaker Deck', icon: '🎤', url: '#' }, // 公式なしのため絵文字
+          // { label: 'Speaker Deck', icon: '🎤', url: '#' },
+          // {
+          //   label: 'Bluesky',
+          //   icon: <FaBluesky />,
+          //   url: '',
+          // },
         ].map((item) => (
           <a
             key={item.label}
