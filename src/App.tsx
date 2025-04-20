@@ -47,7 +47,6 @@ function App() {
             alignItems: 'center',
             justifyContent: 'center',
             gap: '1.5rem',
-            marginBottom: '1rem',
           }}
         >
           <img
@@ -64,7 +63,7 @@ function App() {
           <h1 style={{ fontSize: '2rem', margin: 0 }}>Keiko Higuchi</h1>
         </div>
 
-        <p style={{ fontSize: '1.2rem', margin: 0 }}>Frontend Engineer</p>
+        <p style={{ fontSize: '1.2rem' }}>Frontend Engineer</p>
 
         <p style={{ marginTop: '1rem', fontSize: '1rem', lineHeight: 1.6 }}>
           Based in the US. Frontend Engineer with React / TypeScript. Writing on Zenn and Medium.
@@ -168,13 +167,15 @@ function App() {
       </section>
       <section style={{ marginTop: '3rem' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Interests</h3>
-        <p style={{ fontSize: '1rem' }}>F1, NBA (Warriors), NFL (49ers)</p>
+        <p style={{ fontSize: '1rem' }}>
+          F1, NBA (Warriors), NFL (49ers), Jogging, Japanese Mythology, Greek Mythology, History
+        </p>
       </section>
 
       <footer
         style={{
           marginTop: '3rem',
-          fontSize: '0.85rem',
+          fontSize: '0.9rem',
           color: isDarkMode ? '#aaa' : '#5c4a32',
           textAlign: 'center',
           paddingBottom: '1rem',
