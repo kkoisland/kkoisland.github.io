@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaMedium, FaDiscord } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaMedium,
+  FaDiscord,
+  FaInstagram,
+} from 'react-icons/fa';
 
 import zennIconLight from './assets/zenn-icon.svg';
 import zennIconDark from './assets/zenn-icon-white.svg';
@@ -67,6 +75,8 @@ function App() {
 
         <p style={{ marginTop: '1rem', fontSize: '1rem', lineHeight: 1.6 }}>
           Based in the US. Frontend Engineer with React / TypeScript. Writing on Zenn and Medium.
+          <br />
+          Social accounts are mostly inactive now and mainly for contact.
         </p>
       </section>
       <section
@@ -132,6 +142,12 @@ function App() {
             url: 'https://note.mu/kkoisland',
           },
           { label: 'Medium (EN)', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
+          {
+            label: 'Instagram',
+            icon: <FaInstagram />,
+            url: 'https://www.instagram.com/kkoisland17/',
+          },
+
           {
             label: 'Facebook',
             icon: <FaFacebook />,
