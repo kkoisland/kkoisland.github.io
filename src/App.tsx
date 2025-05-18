@@ -74,7 +74,7 @@ function App() {
 
         <p style={{ fontSize: '1.2rem' }}>Frontend Engineer</p>
 
-        <p style={{ marginTop: '1rem', fontSize: '1rem', lineHeight: 1.6 }}>
+        <p style={{ marginTop: '1rem', lineHeight: 1.6 }}>
           Based in the US. Frontend Engineer with React / TypeScript. Writing on Zenn and Medium.
           <br />
           Social accounts are mostly inactive now and mainly for contact.
