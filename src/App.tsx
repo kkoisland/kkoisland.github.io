@@ -93,7 +93,7 @@ function App() {
             url: 'https://discord.com/channels/@me/921968908561420338',
           },
           {
-            label: 'Zenn',
+            label: 'Zenn (JP)',
             icon: (
               <img
                 src={zennIcon}
@@ -112,7 +112,7 @@ function App() {
             url: 'https://zenn.dev/kkoisland',
           },
           {
-            label: 'note',
+            label: 'note (JP)',
             icon: (
               <img
                 src={noteIcon}
@@ -131,7 +131,7 @@ function App() {
             ),
             url: 'https://note.mu/kkoisland',
           },
-          { label: 'Medium', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
+          { label: 'Medium (EN)', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
           {
             label: 'Facebook',
             icon: <FaFacebook />,
