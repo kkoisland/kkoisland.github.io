@@ -30,6 +30,7 @@ function App() {
         minHeight: '100vh',
         padding: '2rem',
         textAlign: 'center',
+        fontSize: '1.05rem',
       }}
     >
       <button
@@ -95,8 +96,8 @@ function App() {
             url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
           },
 
-          { label: 'X/Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
-          { label: 'X/Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
+          { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
+          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
           {
             label: 'Discord',
             icon: <FaDiscord />,
