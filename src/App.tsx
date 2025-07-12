@@ -178,9 +178,37 @@ function App() {
             onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1.0)')}
           >
             <span style={{ fontSize: '3rem', marginRight: '0.5rem' }}>{item.icon}</span>
-            <span style={{ position: 'relative', top: '-1rem' }}>{item.label}</span>
+            <span
+              style={{
+                position: 'relative',
+                top: '-1rem',
+                fontWeight: 'bold',
+              }}
+            >
+              {item.label}
+            </span>
           </a>
         ))}
+      </section>
+      <section style={{ marginTop: '3rem' }}>
+        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Blog</h3>
+        <p style={{ fontSize: '1rem' }}>
+          <a
+            href="https://past.kkoisland.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: 'inherit',
+              textDecoration: 'none',
+              transition: 'opacity 0.2s ease',
+              fontWeight: 'bold',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+          >
+            Past Writings (JP blog)
+          </a>
+        </p>
       </section>
       <section style={{ marginTop: '3rem' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Interests</h3>
