@@ -169,7 +169,6 @@ function App() {
               display: 'inline-block',
               padding: '1rem',
               borderRadius: '8px',
-              background: 'rgba(255, 255, 255, 0.1)',
               color: 'inherit',
               textDecoration: 'none',
               transition: 'transform 0.2s ease',
