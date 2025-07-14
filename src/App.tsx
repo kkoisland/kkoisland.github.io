@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   FaGithub,
   FaLinkedin,
@@ -15,11 +15,21 @@ import noteIconLight from './assets/note-icon.svg';
 import noteIconDark from './assets/note-icon-white.svg';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+
   const zennIcon = isDarkMode ? zennIconDark : zennIconLight;
   const noteIcon = isDarkMode ? noteIconDark : noteIconLight;
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => setIsDarkMode(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   return (
     <div
