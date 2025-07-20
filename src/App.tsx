@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   FaGithub,
-  FaLinkedin,
+  // FaLinkedin,
   FaTwitter,
   FaFacebook,
   FaMedium,
@@ -85,9 +85,9 @@ function App() {
         <p style={{ fontSize: '1.2rem' }}>Frontend Engineer</p>
 
         <p style={{ marginTop: '1rem', lineHeight: 1.6 }}>
-          Based in the US. Frontend Engineer with React / TypeScript. Writing on Zenn and Medium.
+          Based in the US. Frontend Engineer with React / TypeScript. (5 yrs)
           <br />
-          Social accounts are mostly inactive now and mainly for contact.
+          Social accounts are mainly for contact.
         </p>
       </section>
       <section
@@ -100,19 +100,12 @@ function App() {
       >
         {[
           { label: 'GitHub', icon: <FaGithub />, url: 'https://github.com/kkoisland' },
-          {
-            label: 'LinkedIn',
-            icon: <FaLinkedin />,
-            url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
-          },
-
-          { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
-          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
-          {
-            label: 'Discord',
-            icon: <FaDiscord />,
-            url: 'https://discord.com/channels/@me/921968908561420338',
-          },
+          // Temporarily removed for updates
+          // {
+          //   label: 'LinkedIn',
+          //   icon: <FaLinkedin />,
+          //   url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
+          // },
           {
             label: 'Zenn (JP)',
             icon: (
@@ -132,6 +125,7 @@ function App() {
             ),
             url: 'https://zenn.dev/kkoisland',
           },
+          { label: 'Medium (EN)', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
           {
             label: 'note (JP)',
             icon: (
@@ -152,7 +146,13 @@ function App() {
             ),
             url: 'https://note.mu/kkoisland',
           },
-          { label: 'Medium (EN)', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
+          { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
+          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
+          {
+            label: 'Discord',
+            icon: <FaDiscord />,
+            url: 'https://discord.com/channels/@me/921968908561420338',
+          },
           {
             label: 'Instagram',
             icon: <FaInstagram />,
