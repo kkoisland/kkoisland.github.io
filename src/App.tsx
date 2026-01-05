@@ -35,8 +35,8 @@ function App() {
     <div
       className={isDarkMode ? 'dark' : ''}
       style={{
-        backgroundColor: isDarkMode ? '#2c2c2c' : '#ffffff',
-        color: isDarkMode ? '#f4f4f4' : '#2c2c2c',
+        backgroundColor: isDarkMode ? '#0f172a' : '#ffffff',
+        color: isDarkMode ? '#e2e8f0' : '#1f2937',
         minHeight: '100vh',
         padding: '2rem',
         textAlign: 'center',
@@ -183,8 +183,14 @@ function App() {
               textDecoration: 'none',
               transition: 'transform 0.2s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1.0)')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.color = '#818cf8';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1.0)';
+              e.currentTarget.style.color = 'inherit';
+            }}
           >
             <span style={{ fontSize: '3rem', marginRight: '0.5rem' }}>{item.icon}</span>
             <span
@@ -212,8 +218,14 @@ function App() {
               transition: 'opacity 0.2s ease',
               fontWeight: 'bold',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = '0.8';
+              e.currentTarget.style.color = '#818cf8';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = '1';
+              e.currentTarget.style.color = 'inherit';
+            }}
           >
             Past Writings (JP blog)
           </a>
@@ -230,7 +242,7 @@ function App() {
         style={{
           marginTop: '3rem',
           fontSize: '0.9rem',
-          color: isDarkMode ? '#aaa' : '#5c4a32',
+          color: isDarkMode ? '#64748b' : '#6b7280',
           textAlign: 'center',
           paddingBottom: '1rem',
         }}
