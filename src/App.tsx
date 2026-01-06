@@ -8,11 +8,12 @@ import {
   FaDiscord,
   FaInstagram,
 } from 'react-icons/fa';
+import { FaBluesky } from 'react-icons/fa6';
+import { SiSpeakerdeck } from 'react-icons/si';
+import { BsSun, BsMoon } from 'react-icons/bs';
 
 import zennIconLight from './assets/zenn-icon.svg';
 import zennIconDark from './assets/zenn-icon-white.svg';
-import noteIconLight from './assets/note-icon.svg';
-import noteIconDark from './assets/note-icon-white.svg';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -20,7 +21,6 @@ function App() {
   );
 
   const zennIcon = isDarkMode ? zennIconDark : zennIconLight;
-  const noteIcon = isDarkMode ? noteIconDark : noteIconLight;
 
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
@@ -54,10 +54,11 @@ function App() {
           fontSize: '1.5rem',
           cursor: 'pointer',
           outline: 'none',
+          color: isDarkMode ? '#e2e8f0' : '#1f2937',
         }}
         aria-label="Toggle theme"
       >
-        {isDarkMode ? '🌙' : '☼'}
+        {isDarkMode ? <BsSun /> : <BsMoon />}
       </button>
       <section style={{ marginTop: '3rem', textAlign: 'center' }}>
         <div
@@ -85,7 +86,7 @@ function App() {
         <p style={{ fontSize: '1.2rem' }}>Frontend Engineer</p>
 
         <p style={{ marginTop: '1rem', lineHeight: 1.6 }}>
-          Based in the US. Frontend Engineer with React / TypeScript. (5 yrs)
+          Based in the US. Frontend Engineer with React / TypeScript.
           <br />
           Social accounts are mainly for contact.
         </p>
@@ -127,27 +128,16 @@ function App() {
           },
           { label: 'Medium (EN)', icon: <FaMedium />, url: 'https://medium.com/@kkoisland' },
           {
-            label: 'note (JP)',
-            icon: (
-              <img
-                src={noteIcon}
-                alt="Note icon"
-                style={{
-                  width: '4rem',
-                  height: '4rem',
-                  display: 'inline-block',
-                  verticalAlign: 'middle',
-                  objectFit: 'contain',
-                  position: 'relative',
-                  top: '-0.5rem',
-                  marginRight: '-1rem',
-                }}
-              />
-            ),
-            url: 'https://note.mu/kkoisland',
+            label: 'Speaker Deck (EN)',
+            icon: <SiSpeakerdeck />,
+            url: 'https://speakerdeck.com/kkoisland',
           },
           { label: 'Twitter (JP)', icon: <FaTwitter />, url: 'https://twitter.com/kkoisland' },
-          { label: 'Twitter (EN)', icon: <FaTwitter />, url: 'https://twitter.com/kkoislandUS' },
+          {
+            label: 'Bluesky',
+            icon: <FaBluesky />,
+            url: 'https://bsky.app/profile/kkoisland.bsky.social',
+          },
           {
             label: 'Discord',
             icon: <FaDiscord />,
@@ -164,12 +154,6 @@ function App() {
             icon: <FaFacebook />,
             url: 'https://www.facebook.com/keiko.higuchi.509',
           },
-          // { label: 'Speaker Deck', icon: '🎤', url: '#' },
-          // {
-          //   label: 'Bluesky',
-          //   icon: <FaBluesky />,
-          //   url: '',
-          // },
         ].map((item) => (
           <a
             key={item.label}
@@ -234,7 +218,7 @@ function App() {
       <section style={{ marginTop: '3rem' }}>
         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Interests</h3>
         <p style={{ fontSize: '1rem' }}>
-          F1, NBA (Warriors), NFL (49ers), Jogging, Japanese Mythology, Greek Mythology, History
+          F1, NBA, Jogging, Japanese Mythology, Greek Mythology, History
         </p>
       </section>
 
@@ -247,7 +231,9 @@ function App() {
           paddingBottom: '1rem',
         }}
       >
-        © 2025 Keiko Higuchi
+        © 2026 Keiko Higuchi
+        <br />
+        keiko [at] kkoisland.com
         <br />
         Also known as Keiko Higuchi-Nishiyama in Japan.
       </footer>
