@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   FaGithub,
-  // FaLinkedin,
+  FaLinkedin,
   FaTwitter,
   FaFacebook,
   FaMedium,
@@ -101,12 +101,11 @@ function App() {
       >
         {[
           { label: 'GitHub', icon: <FaGithub />, url: 'https://github.com/kkoisland' },
-          // Temporarily removed for updates
-          // {
-          //   label: 'LinkedIn',
-          //   icon: <FaLinkedin />,
-          //   url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
-          // },
+          {
+            label: 'LinkedIn',
+            icon: <FaLinkedin />,
+            url: 'https://www.linkedin.com/in/keiko-higuchi-b554449/',
+          },
           {
             label: 'Zenn (JP)',
             icon: (
